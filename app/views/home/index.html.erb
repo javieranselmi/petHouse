@@ -1,2 +1,6 @@
 <h1>Bienvenido al programa de Himmel</h1>
 <p>Loguate ya y registra tu perro</p>
+
+<% if flash[:alert] %>
+<p id="notice"><%= flash[:alert] %></p>
+<% end %>

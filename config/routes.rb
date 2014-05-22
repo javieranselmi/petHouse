@@ -1,5 +1,17 @@
 Rails.application.routes.draw do
+
+
   get 'home/index'
+
+  controller :sessions do
+    
+      get 'login' => :new, as: 'login'
+      post 'login' => :create
+      get 'logout' => :destroy
+  end
+
+  get 'sessions/new'
+  get 'sessions/destroy'
 
   resources :pets
 
@@ -9,7 +21,7 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'home#index'
+  root 'home#index', as: 'home'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
