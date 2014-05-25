@@ -1,6 +1,17 @@
-<h1>Bienvenido al programa de Himmel</h1>
-<p>Loguate ya y registra tu perro</p>
-
 <% if flash[:alert] %>
 <p id="notice"><%= flash[:alert] %></p>
 <% end %>
+
+<div class="jumbotron">
+        <h1>Manejá tus mascotas online</h1>
+        <p class="lead">¡Registrate en la web de Beethoven Pet House y accedé a muchísimas oportunidades! ¡Registrá a tus mascotas, solicitá turnos online, recibí información sobre nuevas ofertas, realizá consultas personalizadas y accedé a las mejores oportunidades y descuentos!</p>
+        <p></p>
+
+<% if current_user == nil %>
+<%= render "login_form" %>
+<% end %>
+
+
+</div>
+
+

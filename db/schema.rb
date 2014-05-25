@@ -11,14 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140514042218) do
+ActiveRecord::Schema.define(version: 20140525225703) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "pets", force: true do |t|
     t.string   "name"
-    t.string   "type"
     t.string   "breed"
     t.string   "description"
     t.string   "image_url"

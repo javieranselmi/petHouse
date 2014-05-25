@@ -1,7 +1,7 @@
 <%= form_for(@user) do |f| %>
   <% if @user.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+      <h2>Por favor corregí los siguientes errores para continuar:</h2>
 
       <ul>
       <% @user.errors.full_messages.each do |message| %>
@@ -11,67 +11,126 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :first_name %><br>
-    <%= f.text_field :first_name %>
+
+  <h2>¡Registrate! <small>Es totalmente gratuito.</small></h2>
+  <hr/>
+  
+  <h2>Nombre</h2>
+
+  <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-6">
+        <div class="form-group">
+           <%= f.text_field :first_name , class: "form-control input-lg", placeholder: "Primer nombre" %>
+        </div>
+        </div>
+
+
+        <div class="col-xs-12 col-sm-6 col-md-6">
+        <div class="form-group">
+           <%= f.text_field :last_name , class: "form-control input-lg", placeholder: "Apellido" %>
+        </div>
+        </div>
+
+
   </div>
-  <div class="field">
-    <%= f.label :last_name %><br>
-    <%= f.text_field :last_name %>
+
+  <h2>Datos de login</h2>
+
+        <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="form-group">
+             <%= f.text_field :email , class: "form-control input-lg", placeholder: "Email" %>
+        </div>
+        </div>
+        </div>
+
+  <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-6">
+        <div class="form-group">
+           <%= f.text_field :password , class: "form-control input-lg", placeholder: "Password" %>
+        </div>
+        </div>
+
+
+        <div class="col-xs-12 col-sm-6 col-md-6">
+        <div class="form-group">
+           <%= f.text_field :last_name , class: "form-control input-lg", placeholder: "Confirme password" %>
+        </div>
+        </div>
+
+
   </div>
-  <div class="field">
-    <%= f.label :email %><br>
-    <%= f.email_field :email %>
+
+  <h2>Dirección</h2>
+
+  <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-6">
+        <div class="form-group">
+           <%= f.text_field :adress_street , class: "form-control input-lg", placeholder: "Calle" %>
+        </div>
+        </div>
+
+
+        <div class="col-xs-12 col-sm-3 col-md-3">
+        <div class="form-group">
+           <%= f.text_field :adress_number , class: "form-control input-lg", placeholder: "Número" %>
+        </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-3 col-md-3">
+        <div class="form-group">
+           <%= f.text_field :adress_apartment , class: "form-control input-lg", placeholder: "Depto." %>
+        </div>
+        </div>
+
+
   </div>
-  <div class="field">
-    <%= f.label :password %><br>
-    <%= f.password_field :password %>
+
+  <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-6">
+        <div class="form-group">
+           <%= f.text_field :location , class: "form-control input-lg", placeholder: "Localidad" %>
+        </div>
+        </div>
+
+
+        <div class="col-xs-12 col-sm-3 col-md-3">
+        <div class="form-group">
+           <%= f.text_field :state , class: "form-control input-lg", placeholder: "Provincia" %>
+        </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-3 col-md-3">
+        <div class="form-group">
+           <%= f.text_field :country , class: "form-control input-lg", placeholder: "País" %>
+        </div>
+        </div>
+
+
   </div>
-  <div>
-    <%= f.label :password_confirmation %><br>
-    <%= f.password_field :password_confirmation %>
+
+    <h2> Teléfonos </h2>
+    <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-6">
+        <div class="form-group">
+           <%= f.text_field :phone1 , class: "form-control input-lg", placeholder: "Teléfono fijo" %>
+        </div>
+        </div>
+
+
+        <div class="col-xs-12 col-sm-6 col-md-6">
+        <div class="form-group">
+           <%= f.text_field :phone2 , class: "form-control input-lg", placeholder: "Celular" %>
+        </div>
+        </div>
+
   </div>
-  <div class="field">
-    <%= f.label :admin %><br>
-    <%= f.text_field :admin %>
-  </div>
-  <div class="field">
-    <%= f.label :adress_street %><br>
-    <%= f.text_field :adress_street %>
-  </div>
-  <div class="field">
-    <%= f.label :phone1 %><br>
-    <%= f.text_field :phone1 %>
-  </div>
-  <div class="field">
-    <%= f.label :phone2 %><br>
-    <%= f.text_field :phone2 %>
-  </div>
-  <div class="field">
-    <%= f.label :phone3 %><br>
-    <%= f.text_field :phone3 %>
-  </div>
-  <div class="field">
-    <%= f.label :adress_number %><br>
-    <%= f.text_field :adress_number %>
-  </div>
-  <div class="field">
-    <%= f.label :adress_apartment %><br>
-    <%= f.text_field :adress_apartment %>
-  </div>
-  <div class="field">
-    <%= f.label :location %><br>
-    <%= f.text_field :location %>
-  </div>
-  <div class="field">
-    <%= f.label :state %><br>
-    <%= f.text_field :state %>
-  </div>
-  <div class="field">
-    <%= f.label :country %><br>
-    <%= f.select(:country, ["Argentina"] )%>
-  </div>
+
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit class: "btn btn-success btn-block btn-lg", value: "Registrate" %>
   </div>
+
+
+
 <% end %>
+

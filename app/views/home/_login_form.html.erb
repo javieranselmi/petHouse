@@ -1,0 +1,11 @@
+<%= form_tag :controller => 'sessions', :action => 'create', :method => 'post' do %>
+        <h2 class="form-signin-heading">Logueate</h2>
+
+		<%= email_field_tag :email, params[:email], class: "form-control", required: "", autofocus: "" , placeholder: "Tu Email"%>
+		<%= password_field_tag :password, params[:password], class: "form-control", placeholder: "Tu Contraseña", required: "" %>
+
+		<%= submit_tag "Logueate", class: "btn btn-lg btn-primary btn-block" %>
+
+        <a class="btn btn-lg btn-danger btn-block" href="#" role="button">Registrate si no tenes usuario</a>
+
+<% end %>

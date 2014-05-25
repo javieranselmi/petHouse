@@ -2,7 +2,7 @@ class User < ActiveRecord::Base
   has_secure_password
   has_many :pets
 
-  validates :first_name, :last_name, :email, :admin, :adress_street, :adress_number,
+  validates :first_name, :last_name, :email, :adress_street, :adress_number,
   :location, :state, :country, :presence => true
   validates :email, :uniqueness => true
   validates :email, :format => {

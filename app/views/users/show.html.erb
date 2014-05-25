@@ -1,69 +1,66 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>First name:</strong>
-  <%= @user.first_name %>
-</p>
 
-<p>
-  <strong>Last name:</strong>
-  <%= @user.last_name %>
-</p>
+  <div class="row">
+      <div class="col-sm-6 col-md-4">
+          <%= image_tag "anon_user.png", class:"img-rounded img-responsive" %>
+      </div>
 
-<p>
-  <strong>Email:</strong>
-  <%= @user.email %>
-</p>
+       <div class="col-sm-6 col-md-8">
+                          
+ <div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-heading">Información</div>
+  <div class="panel-body">
+     <h3><%= @user.first_name %> <%= @user.last_name %></h3>
+  </div>
 
-<p>
-  <strong>Admin:</strong>
-  <%= @user.admin %>
-</p>
+  <!-- List group -->
+  <ul class="list-group">
+    <li class="list-group-item"><%= @user.email %></li>
+    <li class="list-group-item"><%= @user.adress_street %> <%= @user.adress_number %> <%= @user.adress_apartment %>, <%= @user.location %>, <%= @user.state %>, <%= @user.country %>.</li>
+    <li class="list-group-item">Teléfono:  <%= @user.phone1 %> / <%= @user.phone2 %></li>
+  </ul>
+</div>
+     
+</div>
+ </div>
 
-<p>
-  <strong>Adress street:</strong>
-  <%= @user.adress_street %>
-</p>
+<% if @pets.any? %>
+ <h3> Estas son tus mascotas:</h3>
+<% @pets.each do |pet| %>
 
-<p>
-  <strong>Phone1:</strong>
-  <%= @user.phone1 %>
-</p>
+   <div class="row">
+      <div class="col-sm-6 col-md-4">
+          <%= image_tag "anon_dog.jpg", class:"img-rounded img-responsive" %>
+      </div>
 
-<p>
-  <strong>Phone2:</strong>
-  <%= @user.phone2 %>
-</p>
+       <div class="col-sm-6 col-md-8">
+                          
+ <div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-heading">Información</div>
+  <div class="panel-body">
+     <h3><%= pet.name %> </h3>
+  </div>
+  
+  <ul class="list-group">
+    
+    <li class="list-group-item">Raza: <%=pet.breed%></li>
+    <li class="list-group-item">Descripción:<%=pet.description %></li>
+    <li class="list-group-item">Tamaño:<%=pet.description%></li>
+    
+  </ul>
+</div>
+     
+</div>
+ </div>
 
-<p>
-  <strong>Phone3:</strong>
-  <%= @user.phone3 %>
-</p>
-
-<p>
-  <strong>Adress number:</strong>
-  <%= @user.adress_number %>
-</p>
-
-<p>
-  <strong>Adress apartment:</strong>
-  <%= @user.adress_apartment %>
-</p>
-
-<p>
-  <strong>Location:</strong>
-  <%= @user.location %>
-</p>
-
-<p>
-  <strong>State:</strong>
-  <%= @user.state %>
-</p>
-
-<p>
-  <strong>Country:</strong>
-  <%= @user.country %>
-</p>
-
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+ <% end %>
+ <% else %>
+ <div class="row">
+  <div class="col-sm-12 col-md-12">
+ <h3> No tenés ninguna mascota registrada.</h3>
+</div>
+</div>
+  <% end %>
