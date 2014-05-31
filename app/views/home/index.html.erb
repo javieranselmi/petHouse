@@ -3,7 +3,12 @@
 <% end %>
 
 <div class="jumbotron">
+		<% if current_user == nil %>
         <h1>Manejá tus mascotas online</h1>
+        <% end %>
+        <% if current_user != nil %>
+        <h2>Hola, <%=current_user.first_name%></h2>
+        <% end %>
         <p class="lead">¡Registrate en la web de Beethoven Pet House y accedé a muchísimas oportunidades! ¡Registrá a tus mascotas, solicitá turnos online, recibí información sobre nuevas ofertas, realizá consultas personalizadas y accedé a las mejores oportunidades y descuentos!</p>
         <p></p>
 

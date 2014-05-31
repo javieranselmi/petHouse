@@ -11,27 +11,54 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
+   <div class="row">
+      <div class="col-sm-6 col-md-4">
+          <%= image_tag "anon_dog.jpg", class:"img-rounded img-responsive" %>
+      </div>
+
+       <div class="col-sm-6 col-md-8">
+                          
+ <div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-heading">
+
+    <div class="row">
+      <div class="col-sm-12 col-md-12">
+          <p>Información</p>
+      </div>
+
   </div>
-  <div class="field">
-    <%= f.label :breed %><br>
-    <%= f.text_field :breed %>
+</div>
+
+  <div class="panel-body">
+     <h3><%= f.text_field :name , class: "form-control", placeholder: "Nombre mascota"%> </h3>
+ 
   </div>
-  <div class="field">
-    <%= f.label :description %><br>
-    <%= f.text_field :description %>
-  </div>
-  <div class="field">
-    <%= f.label :image_url %><br>
-    <%= f.text_field :image_url %>
-  </div>
-  <div class="field">
-    <%= f.label :size %><br>
-    <%= f.text_field :size %>
-  </div>
+  
+  <ul class="list-group">
+    
+    <li class="list-group-item">Raza:  <%= f.text_field :breed , class: "form-control", placeholder: "Raza" %> </li>
+    <li class="list-group-item">Descripción: <%= f.text_field :description , class: "form-control", placeholder: "Descripción" %></li>
+    <li class="list-group-item">Tamaño: <%= f.text_area :size , class: "form-control text-area", placeholder: "Tamaño" %></li>
+    <!-- Single button -->
+
+  </ul>
+
+
+
+</div>
+     
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit class: "btn btn-success btn-block btn-lg", value: "Guardar cambios"%>
   </div>
+
+</div>
+
+
+ </div>
+
+
+
 <% end %>
+
+  

@@ -1,30 +1,36 @@
-<p id="notice"><%= notice %></p>
+   <div class="row">
+      <div class="col-sm-6 col-md-4">
+          <%= image_tag "anon_dog.jpg", class:"img-rounded img-responsive" %>
+      </div>
 
-<p>
-  <strong>Name:</strong>
-  <%= @pet.name %>
-</p>
+       <div class="col-sm-6 col-md-8">
+                          
+ <div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-heading">
 
+    <div class="row">
+      <div class="col-sm-12 col-md-12">
+          <p>Información</p>
+      </div>
 
-<p>
-  <strong>Breed:</strong>
-  <%= @pet.breed %>
-</p>
+  </div>
+</div>
 
-<p>
-  <strong>Description:</strong>
-  <%= @pet.description %>
-</p>
+  <div class="panel-body">
+     <h3><%= @pet.name %> </h3>
+ 
+  </div>
+  
+  <ul class="list-group">
+    
+    <li class="list-group-item">Raza: <%=@pet.breed%></li>
+    <li class="list-group-item">Descripción:<%=@pet.description %></li>
+    <li class="list-group-item">Tamaño:<%=@pet.size%></li>
+    <!-- Single button -->
 
-<p>
-  <strong>Image url:</strong>
-  <%= @pet.image_url %>
-</p>
-
-<p>
-  <strong>Size:</strong>
-  <%= @pet.size %>
-</p>
-
-<%= link_to 'Edit', edit_pet_path(@pet) %> |
-<%= link_to 'Back', pets_path %>
+  </ul>
+</div>
+     
+</div>
+ </div>

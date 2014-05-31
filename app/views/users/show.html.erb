@@ -12,7 +12,9 @@
   <!-- Default panel contents -->
   <div class="panel-heading">Información</div>
   <div class="panel-body">
+    
      <h3><%= @user.first_name %> <%= @user.last_name %></h3>
+    
   </div>
 
   <!-- List group -->
@@ -27,7 +29,17 @@
  </div>
 
 <% if @pets.any? %>
- <h3> Estas son tus mascotas:</h3>
+<div class="well">
+   <div class="row">
+      <div class="col-sm-6 col-md-8">
+          <h3> Estas son tus mascotas:</h3>
+      </div>
+
+       <div class="col-sm-6 col-md-4">
+           <a class="btn btn-primary btn-lg pull-right" role="button">Nueva mascota</a>
+      </div>
+</div>
+</div>
 <% @pets.each do |pet| %>
 
    <div class="row">
@@ -39,17 +51,40 @@
                           
  <div class="panel panel-default">
   <!-- Default panel contents -->
-  <div class="panel-heading">Información</div>
+  <div class="panel-heading">
+
+    <div class="row">
+      <div class="col-sm-6 col-md-4">
+          <p>Información</p>
+      </div>
+      <div class="col-sm-6 col-md-8">
+
+    <div class="btn-group pull-right">
+       <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+        Modificar/Borrar <span class="caret"></span>
+       </button>
+       <ul class="dropdown-menu" role="menu">
+         <li><a href="#">Editar datos</a></li>
+         <li><a href="#">Eliminar mascota</a></li>
+        </ul>
+     </div>
+
+     </div>
+  </div>
+</div>
+
   <div class="panel-body">
      <h3><%= pet.name %> </h3>
+ 
   </div>
   
   <ul class="list-group">
     
     <li class="list-group-item">Raza: <%=pet.breed%></li>
     <li class="list-group-item">Descripción:<%=pet.description %></li>
-    <li class="list-group-item">Tamaño:<%=pet.description%></li>
-    
+    <li class="list-group-item">Tamaño:<%=pet.size%></li>
+    <!-- Single button -->
+
   </ul>
 </div>
      
