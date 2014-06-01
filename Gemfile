@@ -44,3 +44,5 @@ gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails',
                           :branch => '3.0.0'
 # Use country select to select countries in the views from list
 gem 'country-select'
+
+gem 'rails_12factor', group: :production
