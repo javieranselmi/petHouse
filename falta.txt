@@ -1,7 +1,7 @@
 - Footer
 - Segregar vistas
-- Agregar / remover mascotas
-- Editar datos de usuario
-- Editar datos de mascota
-- Bienvenido, {user} en home
+- Redirigir ediciones a usuer/show
+- Overridear mensajes de error
+- Tamaño: sacar el text area - Pets/new
+- Validar presencia variables mascota
 - {RESERVA DE TURNOS}
