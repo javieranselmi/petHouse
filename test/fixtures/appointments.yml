@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  requested_date: 2014-06-14 17:32:35
+  activity: MyString
+  confirmed: false
+
+two:
+  requested_date: 2014-06-14 17:32:35
+  activity: MyString
+  confirmed: false

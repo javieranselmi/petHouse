@@ -1,7 +1,9 @@
-- Footer
 - Segregar vistas
-- Redirigir ediciones a usuer/show
-- Overridear mensajes de error
-- Tamaño: sacar el text area - Pets/new
+- Redirigir ediciones a user/show
+
+- fix password User
 - Validar presencia variables mascota
+- Overridear mensajes de error
+- Limitar selección pets y pais.
+
 - {RESERVA DE TURNOS}

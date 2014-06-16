@@ -1,0 +1,38 @@
+<%= form_for(@appointment) do |f| %>
+  <% if @appointment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@appointment.errors.count, "error") %> prohibited this appointment from being saved:</h2>
+
+      <ul>
+      <% @appointment.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+  <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="form-group">
+          <span>Fecha y hora deseada: </span>
+           <%= f.datetime_select :requested_date , class: "form-control"%>
+        </div>
+        </div>
+
+   </div>
+
+  <div class="row">
+   
+        <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="form-group">
+           <%= f.text_field :activity , class: "form-control input-lg", placeholder: "Actividad" %>
+        </div>
+        </div>
+   </div>
+
+
+  
+    <%= f.submit class: "btn btn-success btn-block btn-lg", value: "Enviar" %>
+ 
+<% end %>
